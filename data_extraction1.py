@@ -1,8 +1,8 @@
 #!/usr/bin/python
 import tweepy
 import csv #Import csv
-auth = tweepy.auth.OAuthHandler('BU6vWOlFm0pz1Q9z3PMs3k9NB', 'YgBrMKlb1S90VBVEIDELqvtzSjHAMMdrmVAFU2SOvy1Gx8O3DO')
-auth.set_access_token('3170285450-cIsl0DuoWCbdlYhy3CgIZlafz8AdwWouY16Mwli', 'u4kAyqlIsugwK9sdjAo0anfpW5679G6amsMIzxR6NedJI')
+auth = tweepy.auth.OAuthHandler('consumer_key', 'consumer_secret')
+auth.set_access_token('access_token', 'access_token_secret')
 api = tweepy.API(auth)
 
 # The Twitter user who we want to get tweets from
@@ -21,3 +21,7 @@ for tweet in tweets:
 #if __name__ == '__main__':
     #pass in the username of the account you want to download
     #tweets("narendramodi") #Modify this username
+
+    #declare file paths as follows for three files
+data_file = "desktop/fake news/data_file.csv"
+COLS=['id','favorite_count', 'retweet_count']
